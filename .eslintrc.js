@@ -9,8 +9,14 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'import'],
   rules: {
     semi: ['off', 'always'],
+    'import/order': ['error', {
+      'newlines-between': 'always',
+      'alphabetize': {
+        'order': 'asc',
+      },
+    }],
   },
 }
